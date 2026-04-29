@@ -1,46 +1,31 @@
 {
-  "name": "My workflow 2",
+  "name": "Create Google Sheet (Safe Template)",
   "nodes": [
     {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
-      "position": [
-        0,
-        0
-      ],
-      "id": "0f929219-b929-4810-b871-841f6574b425",
-      "name": "When clicking ‘Execute workflow’"
+      "position": [0, 0],
+      "name": "Manual Trigger"
     },
     {
       "parameters": {
         "resource": "spreadsheet",
-        "title": "first sheet",
+        "title": "New Spreadsheet",
         "options": {}
       },
       "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7,
-      "position": [
-        208,
-        0
-      ],
-      "id": "ed28829c-0b2c-4b83-8629-b003eca2d21a",
-      "name": "Create spreadsheet",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "7LkZnehDcaTz8YBC",
-          "name": "Google Sheets account"
-        }
-      }
+      "typeVersion": 4,
+      "position": [250, 0],
+      "name": "Create Spreadsheet"
     }
   ],
-  "pinData": {},
   "connections": {
-    "When clicking ‘Execute workflow’": {
+    "Manual Trigger": {
       "main": [
         [
           {
-            "node": "Create spreadsheet",
+            "node": "Create Spreadsheet",
             "type": "main",
             "index": 0
           }
@@ -50,14 +35,6 @@
   },
   "active": false,
   "settings": {
-    "executionOrder": "v1",
-    "binaryMode": "separate"
-  },
-  "versionId": "dd7ba80c-d3c5-4a0f-b901-6369e517dc6c",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "016fc0340d5bca8a0c6c73b85fee9f8049911e2827bdfaaa12c8ad88c03f5cd5"
-  },
-  "id": "i7SvGrIxyAiZMzkp",
-  "tags": []
+    "executionOrder": "v1"
+  }
 }
